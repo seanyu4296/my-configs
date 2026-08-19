@@ -1,0 +1,504 @@
+{
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["y"],
+      "after": ["\"", "*", "y"]
+    }
+    // // added this when i didnt want delete to go to register and i was using system clipboard
+    // {
+    //   "before": ["d"],
+    //   "after": ["\"", "_", "d"],
+    // },
+    // {
+    //   "before": ["D"],
+    //   "after": ["\"", "_", "D"],
+    // },
+    // {
+    //   "before": ["d", "d"],
+    //   "after": ["\"", "_", "d", "d"],
+    // },
+    // {
+    //   "before": ["<BS>"],
+    //   "after": ["\"", "_", "d"],
+    // },
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["y"],
+      "after": ["\"", "*", "y"]
+    }
+    // {
+    //   "before": ["d"],
+    //   "after": ["\"", "_", "d"],
+    // },
+    // {
+    //   "before": ["D"],
+    //   "after": ["\"", "_", "D"],
+    // },
+    // {
+    //   "before": ["d", "d"],
+    //   "after": ["\"", "_", "d", "d"],
+    // },
+    // {
+    //   "before": ["<BS>"],
+    //   "after": ["\"", "_", "d"],
+    // },
+  ],
+  "vim.useSystemClipboard": false,
+  "vim.sneak": true,
+  "vim.surround": true,
+  "editor.inlineSuggest.showToolbar": "always",
+  "vscode-kubernetes.kubectl-path": "/usr/local/bin/kubectl",
+  "[terraform]": {
+    "editor.formatOnSave": true
+  },
+  "jest.runMode": "deferred",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "java.jdt.ls.java.home": "/opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk/Contents/Home",
+  "metals.javaHome": "/opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk/Contents/Home",
+  "editor.tokenColorCustomizations": {
+    // "[Night Owl]": {
+    "textMateRules": [
+      {
+        "scope": ["support.function.delimeter.purescript"],
+        "settings": {
+          "foreground": "#ecc70e" // dd6fd5
+        }
+      },
+      {
+        "scope": ["punctuation.definition.parenthesis.purescript"],
+        "settings": {
+          "foreground": "#6fb6de"
+        }
+      }
+    ]
+    // }
+  },
+  "vscode_custom_css.imports": ["file:///Users/seanyu/Random/synthglow.css"],
+  "workbench.colorCustomizations": {
+    "editorLineNumber.foreground": "#bebebe"
+  },
+  "editor.quickSuggestionsDelay": 7,
+  "terminal.external.osxExec": "iTerm2.app",
+  "editor.lineNumbers": "relative",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 10000,
+  "editor.tabSize": 2,
+  "editor.fontFamily": "\"Liga Hack\", \"Operator Mono Lig\", \"Liga Roboto Mono\"",
+  "git.autofetch": true,
+  "files.associations": {
+    "*.jsx": "javascriptreact",
+    "*.zdl": "graphql",
+    ".env": "dotenv"
+  },
+  "files.eol": "\n",
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false
+  },
+  "gitlens.keymap": "chorded",
+  "editor.multiCursorModifier": "alt",
+  "javascript.updateImportsOnFileMove.enabled": "prompt",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "npm.enableScriptExplorer": true,
+  "breadcrumbs.enabled": true,
+  "eslint.enable": true,
+  "eslint.validate": ["javascript", "typescript"],
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.suggest.localityBonus": true,
+  "editor.codeActionsOnSave": {
+    "source.sortImports": "never",
+    "source.fixAll.eslint": "explicit"
+  },
+  "workbench.editor.highlightModifiedTabs": true,
+  "zenMode.hideLineNumbers": false,
+  "editor.suggestSelection": "first",
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "yaml.schemas": {
+    "file:///Users/xendit/.vscode/extensions/atlassian.atlascode-2.8.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "[graphql]": {},
+  "workbench.iconTheme": "vscode-icons",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.lineHeight": 19,
+  "editor.fontLigatures": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.fontWeight": "600",
+  "editor.letterSpacing": 0.1,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 4,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "files.watcherExclude": {
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true
+  },
+  "java.project.importHint": false,
+  "settingsSync.ignoredExtensions": [],
+  "terminal.explorerKind": "external",
+  "go.useLanguageServer": true,
+  "go.testEnvVars": {
+    "CGO_ENABLED": "1"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "markdown-preview-enhanced.liveUpdate": true,
+  "vs-kubernetes": {
+    "vs-kubernetes.minikube-path.mac": "/Users/xendit/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+    "vscode-kubernetes.kubectl-path.mac": "/Users/seanyu/.vs-kubernetes/tools/kubectl/kubectl",
+    "vscode-kubernetes.minikube-path.mac": "/Users/seanyu/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "redhat.telemetry.enabled": true,
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+    "editor.suggest.snippetsPreventQuickSuggestions": false
+  },
+  "editor.inlineSuggest.enabled": true,
+  "workbench.startupEditor": "none",
+  "go.testTimeout": "180s",
+  "go.disableConcurrentTests": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "yaml": false,
+    "go": false,
+    "rust": false
+  },
+  "cSpell.userWords": [
+    "CIMB",
+    "idempotency",
+    "Infof",
+    "Klik",
+    "Klikpay",
+    "Niaga",
+    "ONEKLIK",
+    "protobuf",
+    "RCBC",
+    "Sasl",
+    "SHOPEEPAY",
+    "Struct",
+    "xendit"
+  ],
+  "cSpell.enabled": false,
+  "githubPullRequests.terminalLinksHandler": "github",
+  "editor.guides.indentation": true,
+  "githubPullRequests.pullBranch": "never",
+  "terraform.languageServer.enable": true,
+  "terraform.experimentalFeatures.validateOnSave": true,
+  "[proto3]": {
+    "editor.defaultFormatter": "bufbuild.vscode-buf"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "yaml.customTags": [
+    "!And",
+    "!And sequence",
+    "!If",
+    "!If sequence",
+    "!Not",
+    "!Not sequence",
+    "!Equals",
+    "!Equals sequence",
+    "!Or",
+    "!Or sequence",
+    "!FindInMap",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Join",
+    "!Join sequence",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!Sub sequence",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!ImportValue sequence",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Split sequence"
+  ],
+  "errorLens.excludeBySource": ["compiler(UndeclaredName)"],
+  "window.zoomLevel": 1,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "terminal.integrated.altClickMovesCursor": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "chat.agent.maxRequests": 100,
+  "git.blame.editorDecoration.enabled": true,
+  "docker.extension.enableComposeLanguageServer": false,
+  "chat.tools.terminal.autoApprove": {
+    "curl -sI *": true,
+    "npx prettier": true,
+    "/^git (status|show|diff).*/": true,
+    "/^npm run (test|build).*/": true,
+    "rm": false,
+    "rmdir": false,
+    "del": false,
+    "kill": false,
+    "curl": false,
+    "wget": false,
+    "eval": false,
+    "chmod": false,
+    "chown": false,
+    "/^Remove-Item\\b/i": false,
+    "git remote": true,
+    "git symbolic-ref": true,
+    "/dev/null": true,
+    "sed": true,
+    "git checkout": true,
+    "git add": true,
+    "git commit": true,
+    "git push": true,
+    "npx tsc": true,
+    "npm run lint": true,
+    "npm run circular-dep:check": true,
+    "npm view": true,
+    "mkdir": true,
+    "cp": true,
+    "npx --no-install jest": true
+  },
+  "terminal.integrated.env.osx": {
+    "Q_NEW_SESSION": "1"
+  },
+  // "editor.accessibilitySupport": "on",
+  "amazonQ.suppressPrompts": {
+    "amazonQChatDisclaimer": true,
+    "amazonQChatPairProgramming": true
+  },
+  "amazonQ.workspaceIndex": true,
+  "editor.accessibilitySupport": "off",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "terminal.integrated.suggest.enabled": true,
+  "chat.mcp.autostart": "never",
+  "github.copilot.chat.newWorkspace.useContext7": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "chat.todoListTool.writeOnly": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "diffEditor.ignoreTrimWhitespace": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "never"
+    }
+  },
+  "todohighlight.keywords": [
+    "DEBUG:",
+    "REVIEW:",
+    {
+      "text": "NOTE:",
+      "color": "#ff0000",
+      "backgroundColor": "yellow",
+      "overviewRulerColor": "grey"
+    },
+    {
+      "text": "TODO:",
+      "isWholeLine": true,
+      "color": "#000"
+    },
+    {
+      "text": "IMPROVE:",
+      "color": "black",
+      "backgroundColor": "yellow"
+    }
+  ],
+  // TODO tree
+  "todo-tree.highlights.useColourScheme": true,
+  // "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
+  // "todo-tree.highlights.useColourScheme": true,
+  // "todo-tree.highlights.defaultHighlight": {
+  //   "type": "text",
+  //   "foreground": "#000000",
+  //   "background": "#FFFF00",
+  //   "opacity": 50
+  // },
+  // "todo-tree.tree.showCountsInTree": true,
+  // "todo-tree.general.statusBar": "tags",
+  // "todo-tree.highlights.highlightDelay": 0,
+  "todo-tree.general.tags": [
+    "TODO",
+    "IMPROVE",
+    "FIXME",
+    "TEST",
+    "MTD",
+    "QUESTION",
+    "[ ]",
+    "[x]"
+  ],
+  "gitlens.mode.active": "zen",
+  "kiroAgent.modelSelection": "claude-opus-4.5",
+  "kiroAgent.trustedCommands": [
+    "source ~/.bashrc && git status",
+    "git add *",
+    "git commit *",
+    "git push *",
+    "gh pr *",
+    "source ~/.zshrc",
+    "npm run type-check",
+    "npm run test *",
+    "npm install * ",
+    "npx tsc --noEmit",
+    "sed *",
+    "npm run format",
+    "git diff *",
+    "grep *",
+    "wc *",
+    "ls *",
+    "find *",
+    "gh auth *",
+    "gh project *",
+    "cat *",
+    "npx eslint *",
+    "npm run *",
+    "git show *",
+    "git log *",
+    "lsof *",
+    "printf *",
+    "go vet *",
+    "go build *",
+    "go mod download && go mod *",
+    "go test *",
+    "go list *",
+    "go mod *",
+    "git tag --sort=version:refname | tail -20",
+    "head *",
+    "git checkout *",
+    "git status",
+    "git pull *",
+    "make run-all-tests *",
+    "git tag *",
+    "gh release *",
+    "git status *",
+    "git fetch *",
+    "git branch --show-current",
+    "npm ls *",
+    "npm show *",
+    "npm audit *",
+    "curl -sI *",
+    "sleep * && curl -sI *",
+    "npx tsc --noEmit 2>&1 | head *",
+    "npx jest *",
+    "cd /Users/seanyu/xendit-projects/_tpi-projects/third-party-integration-service && npm run type-check 2>&1 | head -80",
+    "npx tsc --noEmit *",
+    "cd /Users/seanyu/xendit-projects/_tpi-projects/third-party-integration-service && npx tsc --noEmit --pretty 2>&1 | grep -E \"(refund-adapter|xero/checkout-adapter)\" | head -30",
+    "npm info *",
+    "docker compose ps *",
+    "git branch *",
+    "npx prettier *",
+    "npx knip *",
+    "npx @tanstack/intent@latest load *",
+    "npx vitest *",
+    "npm test *",
+    "git symbolic-ref *",
+    "git rev-parse *",
+    "git remote get-url *",
+    "terraform fmt *",
+    "terraform validate *",
+    "git rebase --continue",
+    "for *",
+    "git rebase *",
+    "git reset --soft master",
+    "GIT_EDITOR=true git rebase --continue",
+    "TEST_RUN_ID=iso-test-1 npm run test:local -- --grep \"Wix Onboarding\"",
+    "sleep *",
+    "git stash",
+    "git stash *"
+  ],
+  "kiroAgent.trustedTools": ["webFetch", "remote_web_search", "web_fetch"],
+  "kiroAgent.enableTabAutocomplete": false,
+  "kiroAgent.notifications.agent.success": true,
+  "kiroAgent.notifications.agent.failure": true,
+  "kiroAgent.agentAutonomy": "Autopilot",
+  "git.showPushSuccessNotification": true,
+  "task.notifyWindowOnTaskCompletion": 30000,
+  "editor.inlineSuggest.edits.showCollapsed": true,
+  "editor.formatOnSave": true,
+  "debug.allowBreakpointsEverywhere": true,
+  "kiroAgent.trust.defaultPattern": "base",
+  "kiroAgent.trust.defaultScope": "user",
+  "kiroAgent.enableCodebaseIndexing": true,
+  "kiroAgent.terminalCommandTimeout": 120000,
+  "haskell.manageHLS": "PATH",
+  "diffEditor.renderSideBySide": true
+  // "todo-tree.highlights.customHighlight": {
+  //   "MTD": {
+  //     "foreground": "#000000",
+  //     "background": "#FFFF00"
+  //   },
+  //   "TODO": {
+  //     "foreground": "#000000",
+  //     "background": "#f8f8b8"
+  //   },
+  //   "FIXME": {
+  //     "foreground": "#FFFFFF",
+  //     "background": "#FF0000"
+  //   },
+  //   "QUESTION": {
+  //     "foreground": "#000000",
+  //     "background": "#FFA500"
+  //   }
+  // }
+}

@@ -1,0 +1,378 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "kiro-local/claude-sonnet-4.6",
+  "small_model": "kiro-local/claude-sonnet-4.6",
+  "mcp": {
+    "github": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "environment": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "x"
+      },
+      "enabled": true
+    },
+    "bravesearch": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-brave-search"
+      ],
+      "environment": {
+        "BRAVE_API_KEY": "x"
+      },
+      "enabled": true
+    },
+    "perplexity": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "perplexity-mcp"
+      ],
+      "environment": {
+        "PERPLEXITY_API_KEY": "x"
+      },
+      "enabled": false
+    },
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "x"
+      },
+      "enabled": true
+    },
+    "xenditslack": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "slack-mcp-server@latest",
+        "--transport",
+        "stdio"
+      ],
+      "environment": {
+        "SLACK_MCP_XOXB_TOKEN": "x"
+      },
+      "enabled": false
+    },
+    "xenditconfluence": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "--python",
+        "3.12",
+        "--with",
+        "fastmcp>=2.5.0",
+        "--with",
+        "fakeredis<2.35.0",
+        "mcp-atlassian",
+        "--confluence-url=https://xendit.atlassian.net/wiki/",
+        "--confluence-username=sean.yu@xendit.co",
+        "--confluence-token=x",
+        "--read-only"
+      ],
+      "enabled": true
+    },
+    "fetch": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "mcp-server-fetch"
+      ],
+      "enabled": true
+    },
+    "datadog": {
+      "type": "remote",
+      "url": "https://mcp.datadoghq.com/api/unstable/mcp-server/mcp?toolsets=core,synthetics",
+      "enabled": true
+    },
+    "slack": {
+      "type": "remote",
+      "url": "https://mcp.slack.com/mcp",
+      "oauth": {
+        "clientId": "x",
+        "clientSecret": "x",
+        "redirectUri": "https://127.0.0.1:19876/mcp/oauth/callback"
+      },
+      "enabled": true
+    },
+    "bigquery": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@toolbox-sdk/server",
+        "--prebuilt",
+        "bigquery",
+        "--stdio"
+      ],
+      "environment": {
+        "BIGQUERY_PROJECT": "prj-xendit-de-prod-svc"
+      },
+      "enabled": true
+    }
+  },
+  "plugin": [
+    // "oh-my-openagent@latest",
+    // "@tarquinen/opencode-dcp@latest"
+  ],
+  "provider": {
+    "kiro-local": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "kiro-local",
+      "options": {
+        "baseURL": "http://localhost:8000/v1",
+        "apiKey": "sean"
+      },
+      "models": {
+        "claude-opus-4.6": {
+          "name": "claude-opus-4.6",
+          "limit": {
+            "context": 1000000,
+            "output": 200000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "claude-sonnet-4.6": {
+          "name": "claude-sonnet-4.6",
+          "limit": {
+            "context": 1000000,
+            "output": 200000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "claude-opus-4.5": {
+          "name": "claude-opus-4.5",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "claude-sonnet-4.5": {
+          "name": "claude-sonnet-4.5",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "claude-sonnet-4": {
+          "name": "claude-sonnet-4",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "claude-haiku-4.5": {
+          "name": "claude-haiku-4.5",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "claude-3.7-sonnet": {
+          "name": "claude-3.7-sonnet",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        }
+      }
+    },
+    "kiro-xendit": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "kiro-xendit",
+      "options": {
+        "baseURL": "x",
+        "apiKey": "x"
+      },
+      "models": {
+        "claude-opus-4.6": {
+          "name": "claude-opus-4.6",
+          "limit": {
+            "context": 1000000,
+            "output": 200000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "claude-sonnet-4.6": {
+          "name": "claude-sonnet-4.6",
+          "limit": {
+            "context": 1000000,
+            "output": 200000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "claude-opus-4.5": {
+          "name": "claude-opus-4.5",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "claude-sonnet-4.5": {
+          "name": "claude-sonnet-4.5",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "claude-sonnet-4": {
+          "name": "claude-sonnet-4",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "claude-haiku-4.5": {
+          "name": "claude-haiku-4.5",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "claude-3.7-sonnet": {
+          "name": "claude-3.7-sonnet",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "permission": {
+    "read": {
+      "~/.config/opencode/get-shit-done/*": "allow"
+    },
+    "external_directory": {
+      "~/.config/opencode/get-shit-done/*": "allow"
+    }
+  }
+}
